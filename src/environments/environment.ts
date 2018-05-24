@@ -2,13 +2,11 @@
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const pkg = require('../../projects/swimlane/ngx-dnd/package.json');
+
 export const environment = {
   production: false,
-  ENV: 'development',
-  IS_PRODUCTION: false,
-  IS_DEV: true,
-  IS_PACKAGE: false,
-  APP_VERSION: JSON.stringify('0.1.1')
+  APP_VERSION: JSON.stringify(pkg.version)
 };
 
 /*
