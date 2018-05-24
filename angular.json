@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "@swimlane/ngx-dnd": {
+      "root": "projects/swimlane/ngx-dnd",
+      "sourceRoot": "projects/swimlane/ngx-dnd/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/swimlane/ngx-dnd/tsconfig.lib.json",
+            "project": "projects/swimlane/ngx-dnd/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/swimlane/ngx-dnd/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/swimlane/ngx-dnd/src/test.ts",
+            "tsConfig": "projects/swimlane/ngx-dnd/tsconfig.spec.json",
+            "karmaConfig": "projects/swimlane/ngx-dnd/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/swimlane/ngx-dnd/tsconfig.lib.json",
+              "projects/swimlane/ngx-dnd/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-dnd"
