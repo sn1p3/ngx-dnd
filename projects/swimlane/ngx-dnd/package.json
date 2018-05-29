@@ -14,6 +14,7 @@
   "devDependencies": {
     "@swimlane/dragula": "^3.7.3",
     "@types/dragula": "^2.1.33",
-    "chg": "^0.3.3"
+    "chg": "^0.3.3",
+    "np": "^3.0.1"
   }
 }
